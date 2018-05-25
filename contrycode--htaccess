@@ -1,0 +1,34 @@
+<ifModule mod_geoip.c>
+GeoIPEnable On
+# Add countries you wish to deny here
+SetEnvIf GEOIP_COUNTRY_CODE AT DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE BE DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE BG DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE HR DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE CY DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE CZ DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE DK DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE EE DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE FI DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE FR DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE DE DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE GR DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE HU DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE IE DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE IT DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE LV DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE LT DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE LU DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE MT DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE NL DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE PL DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE PT DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE RO DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE SI DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE SK DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE ES DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE SE DenyCountry
+SetEnvIf GEOIP_COUNTRY_CODE GB DenyCountry
+Allow from all
+Deny from env=DenyCountry
+</ifModule>
